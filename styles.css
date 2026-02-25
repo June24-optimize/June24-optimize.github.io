@@ -297,6 +297,59 @@ a:hover { text-decoration: none; }
   letter-spacing: 0.05em;
   margin-left: 8px;
 }
+
+/* Awards Section Styling */
+.awards {
+  padding: 32px;
+}
+
+.awards h2 {
+  margin-bottom: 20px;
+}
+
+/* Individual award block */
+.award-item {
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, #4f8cff, #ff7ac8) 1;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 140, 255, 0.05),
+    rgba(255, 122, 200, 0.05)
+  );
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.award-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(100, 100, 255, 0.15);
+}
+
+/* Main title */
+.award-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Secondary info */
+.award-org {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 3px;
+}
+
+/* Leadership items slightly highlighted */
+.leadership {
+  background: linear-gradient(
+    135deg,
+    rgba(79, 140, 255, 0.08),
+    rgba(255, 122, 200, 0.08)
+  );
+}
+
 .news-item{
   padding: 12px 12px;
   border-radius: 14px;
