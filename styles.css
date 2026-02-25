@@ -251,6 +251,39 @@ a:hover { text-decoration: none; }
   background: linear-gradient(135deg, rgba(75,141,255,0.10), rgba(255,92,168,0.10));
   color: rgba(13,19,37,0.78);
 }
+.expertise-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Base badge */
+.badge {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(80,140,255,0.12), rgba(255,120,200,0.12));
+  border: 1px solid rgba(120, 120, 255, 0.2);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+/* Core research emphasis */
+.badge.primary {
+  background: linear-gradient(135deg, #4f8cff, #ff7ac8);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(100, 100, 255, 0.25);
+}
+
+/* Hover animation */
+.badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(100, 100, 255, 0.35);
+}
 .cn-name {
   font-family: 
     "Songti SC",
