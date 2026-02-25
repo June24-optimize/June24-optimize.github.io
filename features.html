@@ -4,66 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wanyu Bian | Features</title>
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
-<body data-page="features">
-  <header>
-    <h1>Wanyu Bian | 卞婉瑜</h1>
-    <div class="contact">
-      📍 San Francisco Bay Area, CA ·
-      <a href="mailto:wanyubian6@gmail.com">wanyubian6@gmail.com</a> ·
-      <a href="tel:+13527459592">+1-352-745-9592</a> ·
-      <a href="https://scholar.google.com/citations?user=zHkpGhYAAAAJ&hl=en">Scholar</a> ·
-      <a href="https://www.linkedin.com/in/wanyu-bian-phd?trk=profile-badge">LinkedIn</a> ·
-      <a href="https://github.com/June24-optimize">GitHub</a>
-    </div>
-    <div style="margin-top:10px;">
-      <a class="download" href="WanyuBian_Resume.pdf" target="_blank" rel="noopener">📄 View / Download Résumé (PDF)</a>
-    </div>
-  </header>
-
-  <nav class="site-nav" aria-label="Primary">
-    <div class="nav-wrap">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="publications.html" data-nav="pubs">Publications & Patents</a>
-      <a href="experience.html" data-nav="exp">Experience</a>
-      <a href="talks.html" data-nav="talks">Invited Talks</a>
-      <a href="features.html" data-nav="features">Features</a>
+<body>
+<nav class="navbar">
+    <div class="container inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-dot"></span>
+        <span>Wanyu Bian</span>
+      </a>
+      <ul class="navlinks">
+        <li><a href="index.html" class="">Home</a></li><li><a href="publications.html" class="">Publications & Patents</a></li><li><a href="experience.html" class="">Experience</a></li><li><a href="talks.html" class="">Invited Talks</a></li><li><a href="features.html" class="active">Features</a></li>
+      </ul>
     </div>
   </nav>
-
-  <main>
-    
-<section>
-  <h2>Features</h2>
-  <p>
-    This page links to your feature posts and longer-form writing hosted on WordPress:
-    <a href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">wanyu624.wordpress.com</a>
-  </p>
-
-  <div class="card">
-    <h3>Open the full page</h3>
-    <p>
-      <a class="download" href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">Visit WordPress →</a>
-    </p>
-    <p class="muted">
-      If you prefer embedding the site here, you can uncomment the iframe below. Note: some sites block embedding via security headers.
-    </p>
-
-    <!--
-    <iframe
-      title="Wanyu WordPress"
-      src="https://wanyu624.wordpress.com"
-      style="width:100%; height:900px; border:1px solid rgba(0,0,0,0.1); border-radius:12px;"
-      loading="lazy"></iframe>
-    -->
+<main class="container">
+<section class="page-head">
+  <h1>Features</h1>
+  <p>Long-form writing and feature posts live on your WordPress site.</p>
+  <div class="cta" style="margin-top:14px;">
+    <a class="btn primary" href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">Open WordPress</a>
   </div>
 </section>
-
-  </main>
-
-  <footer>© 2026 Wanyu Bian · Hosted on GitHub Pages</footer>
+<div class="grid">
+  <section class="card">
+    <h2>WordPress</h2>
+    <p>For a clean experience, this page stays minimal and routes readers to the canonical source.</p>
+    <div class="item">
+      <p class="title">wanyu624.wordpress.com</p>
+      <div class="meta">Feature posts · writing · updates</div>
+      <div class="links">
+        <a href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">Visit site</a>
+      </div>
+    </div>
+  </section>
+  <aside class="card">
+    <h2>Optional</h2>
+    <p class="muted">If you want, we can pull in 6–9 recent post titles here (requires a feed or a manual list).</p>
+    <div class="news-item">
+      <div class="kicker">Style</div>
+      <p class="desc">Blue–pink gradient accents, glassy cards, calm spacing, and high readability.</p>
+    </div>
+  </aside>
+</div>
+</main>
+<footer class="footer">
+  <div class="container">© 2026 Wanyu Bian</div>
+</footer>
 </body>
 </html>

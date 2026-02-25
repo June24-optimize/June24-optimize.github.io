@@ -4,50 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wanyu Bian | Home</title>
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
-<body data-page="home">
-  <header>
-    <h1>Wanyu Bian | 卞婉瑜</h1>
-    <div class="contact">
-      📍 San Francisco Bay Area, CA ·
-      <a href="mailto:wanyubian6@gmail.com">wanyubian6@gmail.com</a> ·
-      <a href="tel:+13527459592">+1-352-745-9592</a> ·
-      <a href="https://scholar.google.com/citations?user=zHkpGhYAAAAJ&hl=en">Scholar</a> ·
-      <a href="https://www.linkedin.com/in/wanyu-bian-phd?trk=profile-badge">LinkedIn</a> ·
-      <a href="https://github.com/June24-optimize">GitHub</a>
-    </div>
-    <div style="margin-top:10px;">
-      <a class="download" href="WanyuBian_Resume.pdf" target="_blank" rel="noopener">📄 View / Download Résumé (PDF)</a>
-    </div>
-  </header>
-
-  <nav class="site-nav" aria-label="Primary">
-    <div class="nav-wrap">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="publications.html" data-nav="pubs">Publications & Patents</a>
-      <a href="experience.html" data-nav="exp">Experience</a>
-      <a href="talks.html" data-nav="talks">Invited Talks</a>
-      <a href="features.html" data-nav="features">Features</a>
+<body>
+<nav class="navbar">
+    <div class="container inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-dot"></span>
+        <span>Wanyu Bian</span>
+      </a>
+      <ul class="navlinks">
+        <li><a href="index.html" class="active">Home</a></li><li><a href="publications.html" class="">Publications & Patents</a></li><li><a href="experience.html" class="">Experience</a></li><li><a href="talks.html" class="">Invited Talks</a></li><li><a href="features.html" class="">Features</a></li>
+      </ul>
     </div>
   </nav>
+<main class="container">
+<section class="hero">
+  <div class="hero-card">
+    <div class="hero-inner">
+      <img class="avatar" src="assets/Wanyu-Bian.jpg" alt="Portrait of Wanyu Bian">
+      <div>
+        <h1 class="h-title">Wanyu Bian <span>卞婉瑜</span></h1>
+        <p class="subtitle">Scientist / Senior ML Engineer · Multimodal AI · Medical Imaging · Representation Learning</p>
 
-  <main>
-    
-<section id="summary">
-  <h2>Summary</h2>
-  <p>
+        <div class="meta-row">
+          <span class="pill">📍 San Francisco Bay Area</span>
+          <a class="pill" href="mailto:wanyubian6@gmail.com">✉️ wanyubian6@gmail.com</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=zHkpGhYAAAAJ&hl=en" target="_blank" rel="noopener">🎓 Google Scholar</a>
+          <a class="pill" href="https://www.linkedin.com/in/wanyu-bian-phd" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="publications.html">Explore publications</a>
+          <a class="btn" href="experience.html">View experience</a>
+          <a class="btn" href="features.html">Features</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="grid">
+  <section class="card">
+    <h2>Summary</h2>
+    <p>
     Senior Machine Learning Engineer with 7+ years of applied research experience in generative AI, mathematical optimization, and large-scale model development.
     Published 10+ first-author papers and contributed to multiple patents spanning foundation modeling, diffusion models, meta-learning, and vision–language systems.
     Expert in bridging deep theoretical understanding with scalable engineering and responsible AI deployment for high-impact, safety-critical domains such as medical imaging and diagnostic automation.
   </p>
   <p><strong>Expertise:</strong> Generative AI · Diffusion & Transformer Models · Vision–Language Modeling · Optimization Algorithms · Responsible AI · Scalable ML Infrastructure</p>
-</section>
-
-<div class="grid">
-  <section id="education" class="card">
+    <div class="badges">
+      <span class="badge">Multimodal / VLM</span>
+      <span class="badge">Diffusion models</span>
+      <span class="badge">Optimization + inverse problems</span>
+      <span class="badge">Representation learning</span>
+    </div>
+  </section>
+  <aside class="card">
+    <h2>Latest news</h2>
+    <div class="news-item">
+      <div class="kicker">Tip</div>
+      <p class="desc">Keep this short: 1–2 lines per update. Add links when relevant.</p>
+    </div>
+    <div class="news-item">
+    <div class="kicker">2026-02</div>
+    <div class="desc">Add your latest update here (e.g., new paper accepted, invited talk, award, patent filing).</div>
+  </div>
+  <div class="news-item">
+    <div class="kicker">2026-01</div>
+    <div class="desc">Add another update here. Keep each item short and link out if relevant.</div>
+  </div>
+  <div class="news-item">
+    <div class="kicker">2025-12</div>
+    <div class="desc">Example: Joined Apple AI/ML – Maps Search team as Senior Machine Learning Engineer.</div>
+  </div>
+  </aside>
+  <section class="card">
     <h2>Education</h2>
     <ul>
       <li>
@@ -66,9 +100,8 @@
       </li>
     </ul>
   </section>
-
-  <section id="awards" class="card">
-    <h2>Awards & Leadership</h2>
+  <section class="card">
+    <h2>Awards &amp; Leadership</h2>
     <ul>
       <li>MICCAI 2022 NIH Participation Award</li>
       <li>MICCAI 2020 Student Participation Award</li>
@@ -79,25 +112,9 @@
     </ul>
   </section>
 </div>
-
-<section id="news">
-  <h2>Latest News</h2>
-  <div class="news-item">
-    <div class="news-date">2026-02</div>
-    <div class="news-text">Add your latest update here (e.g., new paper accepted, invited talk, award, patent filing).</div>
-  </div>
-  <div class="news-item">
-    <div class="news-date">2026-01</div>
-    <div class="news-text">Add another update here. Keep each item short and link out if relevant.</div>
-  </div>
-  <div class="news-item">
-    <div class="news-date">2025-12</div>
-    <div class="news-text">Example: Joined Apple AI/ML – Maps Search team as Senior Machine Learning Engineer.</div>
-  </div>
-</section>
-
-  </main>
-
-  <footer>© 2026 Wanyu Bian · Hosted on GitHub Pages</footer>
+</main>
+<footer class="footer">
+  <div class="container">© 2026 Wanyu Bian</div>
+</footer>
 </body>
 </html>
