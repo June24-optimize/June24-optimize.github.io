@@ -299,65 +299,68 @@ a:hover { text-decoration: none; }
 }
 
 /* Awards Section Styling */
+
 .awards {
   padding: 32px;
 }
 
+/* Main section title */
 .awards h2 {
-  margin-bottom: 20px;
-}
-
-/* Awards section styling */
-.awards h2 {
-  margin-bottom: 25px;
-}
-
-/* Group headings */
-.award-group h3 {
-  font-size: 1rem;
+  font-size: 1.55rem;
   font-weight: 600;
-  margin-bottom: 12px;
-  color: #6a7cff;
-  letter-spacing: 0.5px;
+  margin-bottom: 26px;
+  color: #2e3354; /* deep indigo charcoal */
+  letter-spacing: -0.01em;
 }
 
-/* Individual award card */
+/* Group headers */
+.award-group h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, var(--blue), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Award card */
 .award-item {
   padding: 14px 18px;
-  margin-bottom: 12px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(80,140,255,0.08), rgba(255,120,200,0.08));
-  border: 1px solid rgba(120,120,255,0.15);
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(75,141,255,0.06),
+    rgba(255,92,168,0.06)
+  );
+  border: 1px solid rgba(75,141,255,0.15);
   transition: all 0.25s ease;
 }
 
 /* Title */
 .award-title {
+  display: block;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  color: #3a4068; /* softer than black */
+  line-height: 1.5;
 }
 
 /* Meta line */
 .award-meta {
   display: block;
-  font-size: 0.85rem;
   margin-top: 4px;
-  color: #888;
+  font-size: 0.88rem;
+  color: #7a809f; /* elegant muted tone */
 }
 
-/* Hover effect */
+/* Hover polish */
 .award-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(100,100,255,0.15);
-}
-
-/* Leadership items slightly highlighted */
-.leadership {
-  background: linear-gradient(
-    135deg,
-    rgba(79, 140, 255, 0.08),
-    rgba(255, 122, 200, 0.08)
-  );
+  box-shadow: 0 8px 22px rgba(75,141,255,0.18);
 }
 
 .news-item{
