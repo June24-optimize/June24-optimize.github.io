@@ -251,7 +251,19 @@ a:hover { text-decoration: none; }
   background: linear-gradient(135deg, rgba(75,141,255,0.10), rgba(255,92,168,0.10));
   color: rgba(13,19,37,0.78);
 }
+.cn-name {
+  font-family: 
+    "Songti SC",
+    "STSong",
+    "Noto Serif SC",
+    "PMingLiU",
+    "SimSun",
+    serif;
 
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-left: 8px;
+}
 .news-item{
   padding: 12px 12px;
   border-radius: 14px;
