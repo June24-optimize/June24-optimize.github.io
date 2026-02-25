@@ -1,238 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wanyu Bian | 卞婉瑜 | Machine Learning Engineer</title>
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-
-<style>
-  /* ===== Base ===== */
-  body {
-    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-    background-color: #f9fafc;
-    color: #222;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  h1, h2, h3 {
-    font-family: "Merriweather", Georgia, serif;
-    color: #1a1a1a;
-    margin-bottom: 4px;
-  }
-  h1 {
-    font-size: 2.1rem;
-    text-align: center;
-    margin-top: 30px;
-  }
-  h2 {
-    font-size: 1.3rem;
-    border-bottom: 2px solid #0077cc;
-    padding-bottom: 3px;
-    margin-top: 35px;
-  }
-  a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-  a:hover { text-decoration: underline; }
-
-  /* ===== Layout ===== */
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 45px 60px;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-  }
-  header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .contact a {
-    margin: 0 8px;
-    font-weight: 500;
-  }
-  section { margin-bottom: 30px; }
-  ul { margin: 6px 0 0 18px; padding: 0; }
-  li { margin-bottom: 5px; }
-
-  /* ===== Education styling ===== */
-  #education ul li {
-    list-style: none;
-    border-left: 3px solid #0077cc;
-    padding-left: 10px;
-    margin-bottom: 10px;
-  }
-  #education span {
-    float: right;
-    color: #444;
-    font-size: 0.9rem;
-  }
-
-  /* ===== Misc ===== */
-  .download {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    border: 1.5px solid #0077cc;
-    border-radius: 5px;
-    color: #0077cc;
-    font-weight: 600;
-  }
-  .download:hover {
-    background: #0077cc;
-    color: white;
-    text-decoration: none;
-  }
-  footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #777;
-    margin-bottom: 25px;
-  }
-  @media (max-width: 700px) {
-    main { padding: 25px; }
-    #education span { float: none; display: block; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanyu Bian | Home</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-<header>
-  <h1>Wanyu Bian | 卞婉瑜</h1>
-  <div class="contact">
-    📍 San Francisco Bay Area, CA ·
-    <a href="mailto:wanyubian6@gmail.com">wanyubian6@gmail.com</a> ·
-    <a href="tel:+13527459592">+1-352-745-9592</a> ·
-    <a href="https://scholar.google.com/citations?user=zHkpGhYAAAAJ&hl=en">Scholar</a> ·
-    <a href="https://www.linkedin.com/in/wanyu-bian-phd?trk=profile-badge">LinkedIn</a> ·
-    <a href="https://github.com/June24-optimize">GitHub</a>
-  </div>
+<body data-page="home">
+  <header>
+    <h1>Wanyu Bian | 卞婉瑜</h1>
+    <div class="contact">
+      📍 San Francisco Bay Area, CA ·
+      <a href="mailto:wanyubian6@gmail.com">wanyubian6@gmail.com</a> ·
+      <a href="tel:+13527459592">+1-352-745-9592</a> ·
+      <a href="https://scholar.google.com/citations?user=zHkpGhYAAAAJ&hl=en">Scholar</a> ·
+      <a href="https://www.linkedin.com/in/wanyu-bian-phd?trk=profile-badge">LinkedIn</a> ·
+      <a href="https://github.com/June24-optimize">GitHub</a>
+    </div>
+    <div style="margin-top:10px;">
+      <a class="download" href="WanyuBian_Resume.pdf" target="_blank" rel="noopener">📄 View / Download Résumé (PDF)</a>
+    </div>
+  </header>
 
-  <div style="margin-top:10px;">
-    <a class="download" href="WanyuBian_Resume.pdf" target="_blank">📄 View / Download Résumé (PDF)</a>
-  </div>
-</header>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-wrap">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="publications.html" data-nav="pubs">Publications & Patents</a>
+      <a href="experience.html" data-nav="exp">Experience</a>
+      <a href="talks.html" data-nav="talks">Invited Talks</a>
+      <a href="features.html" data-nav="features">Features</a>
+    </div>
+  </nav>
 
-<main>
-  <!-- ===== Summary ===== -->
-  <section id="summary">
-    <h2>Summary</h2>
-    <p>
-      Senior Machine Learning Engineer with 7+ years of applied research experience in generative AI, mathematical optimization, and large-scale model development.
-      Published 10+ first-author papers and contributed to multiple patents spanning foundation modeling, diffusion models, meta-learning, and vision–language systems.
-      Expert in bridging deep theoretical understanding with scalable engineering and responsible AI deployment for high-impact, safety-critical domains such as medical imaging and diagnostic automation.
-    </p>
-    <p><strong>Expertise:</strong> Generative AI · Diffusion & Transformer Models · Vision–Language Modeling · Optimization Algorithms · Responsible AI · Scalable ML Infrastructure</p>
-  </section>
+  <main>
+    
+<section id="summary">
+  <h2>Summary</h2>
+  <p>
+    Senior Machine Learning Engineer with 7+ years of applied research experience in generative AI, mathematical optimization, and large-scale model development.
+    Published 10+ first-author papers and contributed to multiple patents spanning foundation modeling, diffusion models, meta-learning, and vision–language systems.
+    Expert in bridging deep theoretical understanding with scalable engineering and responsible AI deployment for high-impact, safety-critical domains such as medical imaging and diagnostic automation.
+  </p>
+  <p><strong>Expertise:</strong> Generative AI · Diffusion & Transformer Models · Vision–Language Modeling · Optimization Algorithms · Responsible AI · Scalable ML Infrastructure</p>
+</section>
 
-  <!-- ===== Education ===== -->
-  <section id="education">
+<div class="grid">
+  <section id="education" class="card">
     <h2>Education</h2>
     <ul>
       <li>
         <strong>Ph.D. in Applied Mathematics</strong>, University of Florida, Gainesville, FL
         <br><em>Advisor: Yunmei Chen</em>
-        <span>Aug 2017 – Aug 2022</span>
+        <span class="dates">Aug 2017 – Aug 2022</span>
       </li>
       <li>
         <strong>M.S. in Applied Mathematics</strong>, University of Florida, Gainesville, FL
         <br><em>Advisor: Yunmei Chen</em>
-        <span>Aug 2017 – May 2019</span>
+        <span class="dates">Aug 2017 – May 2019</span>
       </li>
       <li>
         <strong>B.S. in Applied Mathematics & Statistics</strong>, University of Missouri, Columbia, MO
-        <span>Aug 2013 – May 2017</span>
+        <span class="dates">Aug 2013 – May 2017</span>
       </li>
     </ul>
   </section>
 
-  <!-- ===== Experience ===== -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Senior Machine Learning Engineer</strong> — Apple, Cupertino, CA (Dec 2025 – Present)
-        <ul>
-          <li>Focus on personalized search systems and vision-language model development for large-scale, user-facing products.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Machine Learning Scientist</strong> — Neuro42, San Francisco, CA (Oct 2023 – Dec 2025)
-        <ul>
-          <li>Developed generative AI systems for MRI reconstruction, segmentation, and diagnostic text generation.</li>
-          <li>Built multi-GPU PyTorch training pipelines on AWS, reducing inference latency by 40%.</li>
-          <li>Filed five patents covering noise suppression, magnet-array optimization, and generative modeling.</li>
-          <li>Implemented safety and integrity evaluations for clinical AI deployment.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Research Fellow</strong> — Harvard Medical School, Boston, MA (May 2022 – Oct 2023)
-        <ul>
-          <li>Developed meta-learning and diffusion frameworks for multi-modal MRI reconstruction.</li>
-          <li>Integrated physical priors as embeddings for physics-informed diffusion models (PSNR +2 dB over SOTA).</li>
-          <li>Collaborated with clinical teams to validate reliability and interpretability under safety constraints.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Graduate Research & Teaching Assistant</strong> — University of Florida (Aug 2017 – May 2022)
-        <ul>
-          <li>Researched optimization-based meta-learning for inverse imaging problems.</li>
-          <li>Taught and mentored students in Numerical Linear Algebra, Numerical Analysis, and Calculus.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ===== Technical Skills ===== -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> Python, Matlab, R, SQL, SAS</p>
-    <p><strong>Frameworks:</strong> PyTorch, TensorFlow, Keras, Hugging Face, Diffusers, Scikit-learn</p>
-    <p><strong>Engineering:</strong> CUDA, Docker, AWS EC2/S3, Linux, Git, CI/CD</p>
-    <p><strong>Research:</strong> Mathematical Modeling, Variational Optimization, Inverse Problems, Statistical Learning</p>
-  </section>
-
-  <!-- ===== Publications ===== -->
-  <section id="publications">
-    <h2>Selected Publications</h2>
-    <ul>
-      <li><em>Diffusion Modeling with Domain-Conditioned Prior Guidance for Accelerated MRI & qMRI Reconstruction</em>, IEEE TMI, 2024.</li>
-      <li><em>Multi-Task MRI Reconstruction using Meta-Learning</em>, Magnetic Resonance Imaging, 2025.</li>
-      <li><em>Optimization-Based Deep Learning for MRI Reconstruction: A Review</em>, Applied Mathematics, 2024.</li>
-      <li><em>Learnable Variational Models for Joint Multi-Modal MRI Reconstruction and Synthesis</em>, MICCAI 2022 (Oral).</li>
-    </ul>
-    <p><a href="https://scholar.google.com/citations?user=zHkpGhYAAAAJ&hl=en">Full publication list →</a></p>
-  </section>
-
-  <!-- ===== Patents ===== -->
-  <section id="patents">
-    <h2>Patents</h2>
-    <ul>
-      <li>Machine Learning System for Context-Aware Expressive Animation with Emotional Intelligence (US 19/242,890)</li>
-      <li>Vision-Language AI for Automated Medical Diagnostic Indication (US 19/240,016)</li>
-      <li>Ultra-Low-Field MRI Denoising via Self-Supervised Learning (US 63/741,377)</li>
-      <li>Optimizing Magnet Array Configurations for Portable MRI (US 63/740,816)</li>
-      <li>Measurement-Domain Noise Reduction in MRI (US 63/750,253)</li>
-    </ul>
-  </section>
-
-  <!-- ===== Projects ===== -->
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <ul>
-      <li><strong>Vision–Language Diagnostic Generation:</strong> ViT + Transformer Decoder system, BLEU 0.82 vs expert reports.</li>
-      <li><strong>Self-Supervised Contrast Enhancement:</strong> +20% gray/white matter contrast improvement.</li>
-      <li><strong>EMI Noise Suppression:</strong> Self-supervised model improving SNR by +11 dB.</li>
-      <li><strong>Domain-Conditioned Diffusion:</strong> Physics-aware embeddings with +2 dB PSNR gain.</li>
-    </ul>
-  </section>
-
-  <!-- ===== Awards ===== -->
-  <section id="awards">
+  <section id="awards" class="card">
     <h2>Awards & Leadership</h2>
     <ul>
       <li>MICCAI 2022 NIH Participation Award</li>
@@ -243,8 +78,26 @@
       <li>DataFest “Best in Show,” University of Missouri, 2017</li>
     </ul>
   </section>
-</main>
+</div>
 
-<footer>© 2025 Wanyu Bian · Built with ❤️ using HTML & CSS · Hosted on GitHub Pages</footer>
+<section id="news">
+  <h2>Latest News</h2>
+  <div class="news-item">
+    <div class="news-date">2026-02</div>
+    <div class="news-text">Add your latest update here (e.g., new paper accepted, invited talk, award, patent filing).</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2026-01</div>
+    <div class="news-text">Add another update here. Keep each item short and link out if relevant.</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2025-12</div>
+    <div class="news-text">Example: Joined Apple AI/ML – Maps Search team as Senior Machine Learning Engineer.</div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>© 2026 Wanyu Bian · Hosted on GitHub Pages</footer>
 </body>
 </html>

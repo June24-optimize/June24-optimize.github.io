@@ -1,0 +1,206 @@
+
+/* ===== Base ===== */
+:root{
+  --accent:#0077cc;
+  --bg:#f9fafc;
+  --text:#222;
+  --muted:#666;
+  --card:#fff;
+  --shadow: 0 3px 12px rgba(0,0,0,0.07);
+  --radius: 12px;
+}
+*{ box-sizing:border-box; }
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.65;
+}
+h1, h2, h3 {
+  font-family: "Merriweather", Georgia, serif;
+  color: #1a1a1a;
+  margin: 0 0 6px 0;
+}
+h1 { font-size: 2.15rem; text-align:center; margin-top: 26px; }
+h2 {
+  font-size: 1.35rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+  margin-top: 28px;
+}
+a { color: var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* ===== Header ===== */
+header{
+  text-align:center;
+  padding: 18px 12px 0 12px;
+}
+.contact{
+  margin-top: 6px;
+}
+.contact a{
+  margin: 0 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.download {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-weight: 650;
+}
+.download:hover {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== Navigation ===== */
+nav.site-nav{
+  margin: 18px auto 0 auto;
+  max-width: 980px;
+  padding: 0 14px;
+}
+nav.site-nav .nav-wrap{
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 10px 10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 6px;
+  justify-content:center;
+}
+nav.site-nav a{
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+nav.site-nav a:hover{
+  background: rgba(0,119,204,0.10);
+  text-decoration:none;
+}
+body[data-page="home"] nav a[data-nav="home"],
+body[data-page="pubs"] nav a[data-nav="pubs"],
+body[data-page="exp"] nav a[data-nav="exp"],
+body[data-page="talks"] nav a[data-nav="talks"],
+body[data-page="features"] nav a[data-nav="features"]{
+  background: rgba(0,119,204,0.14);
+  color: #0b3f66;
+}
+
+/* ===== Layout ===== */
+main {
+  max-width: 980px;
+  margin: 24px auto 40px auto;
+  background: var(--card);
+  padding: 42px 56px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+section { margin-bottom: 26px; }
+ul { margin: 8px 0 0 18px; padding: 0; }
+li { margin-bottom: 6px; }
+
+/* ===== Utility components ===== */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.card{
+  background:#fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.badge{
+  display:inline-block;
+  font-size: 0.85rem;
+  padding: 2px 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  color:#333;
+}
+.muted{ color: var(--muted); }
+.kv{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.kv span{ white-space:nowrap; }
+hr.sep{
+  border:none;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 18px 0;
+}
+
+/* ===== Education styling ===== */
+#education ul li {
+  list-style: none;
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+#education span.dates {
+  float: right;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* ===== Experience ===== */
+.role{
+  margin-top: 10px;
+}
+.role .title{
+  font-weight: 800;
+}
+.role .meta{
+  color:#444;
+  font-size: 0.98rem;
+  margin-top: 2px;
+}
+.role ul{
+  margin-top: 6px;
+}
+
+/* ===== News ===== */
+.news-item{
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.news-item:last-child{ border-bottom:none; }
+.news-date{
+  min-width: 120px;
+  font-weight: 700;
+  color:#1a1a1a;
+}
+.news-text{ flex:1; }
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 0 26px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 860px){
+  main{ padding: 28px 22px; margin: 18px 14px 34px 14px; }
+  .grid{ grid-template-columns: 1fr; }
+  #education span.dates{ float:none; display:block; margin-top: 4px;}
+  .news-date{ min-width: 98px; }
+}
