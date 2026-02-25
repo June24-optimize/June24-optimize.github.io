@@ -307,38 +307,48 @@ a:hover { text-decoration: none; }
   margin-bottom: 20px;
 }
 
-/* Individual award block */
+/* Awards section styling */
+.awards h2 {
+  margin-bottom: 25px;
+}
+
+/* Group headings */
+.award-group h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #6a7cff;
+  letter-spacing: 0.5px;
+}
+
+/* Individual award card */
 .award-item {
   padding: 14px 18px;
-  margin-bottom: 14px;
-  border-left: 4px solid;
-  border-image: linear-gradient(180deg, #4f8cff, #ff7ac8) 1;
-  background: linear-gradient(
-    135deg,
-    rgba(79, 140, 255, 0.05),
-    rgba(255, 122, 200, 0.05)
-  );
-  border-radius: 10px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(80,140,255,0.08), rgba(255,120,200,0.08));
+  border: 1px solid rgba(120,120,255,0.15);
   transition: all 0.25s ease;
 }
 
+/* Title */
+.award-title {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Meta line */
+.award-meta {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  color: #888;
+}
+
+/* Hover effect */
 .award-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(100, 100, 255, 0.15);
-}
-
-/* Main title */
-.award-title {
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-/* Secondary info */
-.award-org {
-  display: block;
-  font-size: 0.9rem;
-  opacity: 0.75;
-  margin-top: 3px;
+  box-shadow: 0 6px 18px rgba(100,100,255,0.15);
 }
 
 /* Leadership items slightly highlighted */
