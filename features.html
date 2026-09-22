@@ -24,150 +24,25 @@
 <main class="container">
 <section class="page-head">
   <h1>Features</h1>
-  <p>Long-form writing and feature posts, pulled live from my WordPress site.</p>
-  <div class="cta" style="margin-top:14px;">
-    <a class="btn primary" href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">Open WordPress</a>
-  </div>
+  <p>
+    Long-form writing and feature posts, live from
+    <a class="inline-link" href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">wanyu624.wordpress.com</a>.
+  </p>
 </section>
 
-<div class="grid single">
-  <section class="card">
-    <h2>Live from WordPress</h2>
-    <div class="site-embed">
-      <iframe
-        src="https://wanyu624.wordpress.com"
-        title="wanyu624.wordpress.com — front page"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <p class="muted embed-note">
-      Preview not showing? Some browsers block embedded sites —
-      <a href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">open wanyu624.wordpress.com directly →</a>
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Recent Posts</h2>
-
-    <!-- Filled at runtime from the WordPress.com public API; see the script below. -->
-    <div id="posts" class="post-grid" aria-live="polite" aria-busy="true">
-      <p class="muted post-status">Loading posts…</p>
-    </div>
-  </section>
+<div class="site-embed full">
+  <iframe
+    src="https://wanyu624.wordpress.com"
+    title="wanyu624.wordpress.com — full site"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+<p class="muted embed-note">
+  Preview not showing? Some browsers block embedded sites —
+  <a href="https://wanyu624.wordpress.com" target="_blank" rel="noopener">open wanyu624.wordpress.com directly →</a>
+</p>
 </main>
 <footer class="footer">
   <div class="container">© 2026 Wanyu Bian</div>
 </footer>
-
-<script>
-/* Pull recent posts from the WordPress.com public REST API (no key required,
-   CORS-enabled) so this page stays in sync with the blog on its own. */
-(function () {
-  var SITE  = 'wanyu624.wordpress.com';
-  var COUNT = 9;
-  var API   = 'https://public-api.wordpress.com/rest/v1.1/sites/' + SITE +
-              '/posts/?number=' + COUNT +
-              '&fields=ID,title,date,URL,excerpt,featured_image';
-
-  var host = document.getElementById('posts');
-
-  function fmtDate(iso) {
-    var d = new Date(iso);
-    return isNaN(d) ? '' : d.toLocaleDateString('en-US',
-      { year: 'numeric', month: 'short', day: 'numeric' });
-  }
-
-  /* WordPress returns HTML in title/excerpt; render it as text to keep the
-     card layout intact and avoid injecting markup. */
-  function toText(html) {
-    var el = document.createElement('div');
-    el.innerHTML = html || '';
-    return (el.textContent || '').replace(/\s+/g, ' ').trim();
-  }
-
-  function clip(text, max) {
-    return text.length > max ? text.slice(0, max).replace(/\s+\S*$/, '') + '…' : text;
-  }
-
-  function fallback(msg) {
-    host.setAttribute('aria-busy', 'false');
-    host.innerHTML = '';
-    var p = document.createElement('p');
-    p.className = 'muted post-status';
-    p.textContent = msg + ' ';
-    var a = document.createElement('a');
-    a.href = 'https://wanyu624.wordpress.com';
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.textContent = 'Read everything on WordPress →';
-    p.appendChild(a);
-    host.appendChild(p);
-  }
-
-  function card(post) {
-    var a = document.createElement('a');
-    a.className = 'post';
-    a.href = post.URL;
-    a.target = '_blank';
-    a.rel = 'noopener';
-
-    if (post.featured_image) {
-      var img = document.createElement('img');
-      img.className = 'post-img';
-      img.src = post.featured_image;
-      img.alt = '';
-      img.loading = 'lazy';
-      a.appendChild(img);
-    }
-
-    var body = document.createElement('div');
-    body.className = 'post-body';
-
-    var h3 = document.createElement('h3');
-    h3.className = 'post-title';
-    h3.textContent = toText(post.title) || 'Untitled';
-    body.appendChild(h3);
-
-    var meta = document.createElement('div');
-    meta.className = 'post-date';
-    meta.textContent = fmtDate(post.date);
-    body.appendChild(meta);
-
-    var excerpt = clip(toText(post.excerpt), 160);
-    if (excerpt) {
-      var p = document.createElement('p');
-      p.className = 'post-excerpt';
-      p.textContent = excerpt;
-      body.appendChild(p);
-    }
-
-    var more = document.createElement('span');
-    more.className = 'post-more';
-    more.textContent = 'Read more →';
-    body.appendChild(more);
-
-    a.appendChild(body);
-    return a;
-  }
-
-  fetch(API)
-    .then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(function (data) {
-      var posts = (data && data.posts) || [];
-      if (!posts.length) return fallback('No posts found.');
-
-      host.setAttribute('aria-busy', 'false');
-      host.innerHTML = '';
-      posts.forEach(function (p) { host.appendChild(card(p)); });
-    })
-    .catch(function () {
-      fallback('Posts could not be loaded right now.');
-    });
-})();
-</script>
 </body>
 </html>
