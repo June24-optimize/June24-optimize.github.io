@@ -587,6 +587,11 @@ a { color: inherit; text-decoration: none; }
 .grid.single { grid-template-columns: 1fr; }
 
 /* ── Features page: embedded live view of the WordPress site ── */
+
+/* Tighter header, so the embed below it gets the vertical room */
+.page-head.compact { padding: 22px 0 6px; }
+.page-head.compact p { margin-top: 6px; font-size: 14px; }
+
 .site-embed {
   border-radius: var(--radius-sm);
   border: 1px solid var(--item-border);
@@ -595,8 +600,15 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow-soft);
   height: 720px;
 }
-/* Full-bleed variant: fills the viewport below the header */
-.site-embed.full { height: calc(100vh - 210px); min-height: 640px; }
+/* Full-bleed variant: breaks out of the 980px container and fills the
+   viewport height, so as much of the blog shows as possible. */
+.site-embed.full {
+  width: min(calc(100vw - 36px), 1500px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: calc(100vh - 150px);
+  min-height: 880px;
+}
 .site-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 .embed-note { margin: 10px 0 26px; font-size: 13px; }
@@ -630,5 +642,5 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 560px) {
-  .site-embed, .site-embed.full { height: 560px; min-height: 0; }
+  .site-embed, .site-embed.full { height: calc(100vh - 130px); min-height: 640px; }
 }
