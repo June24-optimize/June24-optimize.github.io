@@ -593,6 +593,14 @@ a { color: inherit; text-decoration: none; }
 .page-head.compact p { margin-top: 6px; font-size: 14px; }
 
 .site-embed {
+  /* WordPress.com injects a "Design a site like this with WordPress.com"
+     banner at the top of free-plan sites. It lives inside a cross-origin
+     iframe, so it can't be styled away from here — instead the iframe is
+     shifted up by this much and the overflow clipped, hiding the banner.
+     Raise/lower this if the crop cuts too much or too little. */
+  --embed-crop-top: 56px;
+
+  position: relative;
   border-radius: var(--radius-sm);
   border: 1px solid var(--item-border);
   background: #fff;
@@ -609,7 +617,15 @@ a { color: inherit; text-decoration: none; }
   height: calc(100vh - 150px);
   min-height: 880px;
 }
-.site-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+.site-embed iframe {
+  position: absolute;
+  top: calc(-1 * var(--embed-crop-top));
+  left: 0;
+  width: 100%;
+  height: calc(100% + var(--embed-crop-top));
+  border: 0;
+  display: block;
+}
 
 .embed-note { margin: 10px 0 26px; font-size: 13px; }
 .embed-note a {
