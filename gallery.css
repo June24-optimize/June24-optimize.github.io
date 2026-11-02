@@ -37,9 +37,9 @@ body.gallery-page {
 /* ── hero ── */
 .g-hero { text-align: center; padding: 76px 0 40px; }
 .g-eyebrow { font-size: 13px; letter-spacing: .34em; text-transform: uppercase; color: var(--teal-soft); margin: 0 0 14px; }
-.g-hero h1 { font-size: clamp(64px, 12vw, 132px); }
-.g-tagline { font-size: clamp(15px, 2vw, 19px); letter-spacing: .06em; margin: 14px 0 0; color: var(--teal-soft); }
-.g-epigraph { font-family: "Amatic SC", cursive; font-weight: 700; font-size: clamp(34px, 5.2vw, 60px); line-height: .98; max-width: 17em; margin: 56px auto 0; }
+.g-hero h1 { font-size: clamp(46px, 7.5vw, 88px); }
+.g-tagline { font-size: clamp(13px, 1.5vw, 16px); letter-spacing: .06em; margin: 14px 0 0; color: var(--teal-soft); }
+.g-epigraph { font-family: "Amatic SC", cursive; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); line-height: 1; max-width: 20em; margin: 44px auto 0; }
 .g-squiggle { display: block; width: 190px; height: 18px; margin: 34px auto 0; color: var(--teal); opacity: .8; }
 
 /* ── prints: every image sits on the page like a taped-down print ── */
@@ -69,11 +69,11 @@ body.gallery-page {
 .chapter { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 6vw, 84px); align-items: center; padding: 70px 0; }
 .chapter.flip { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
 .chapter.flip .print { order: 2; }
-.story h2, .story h4 { font-size: clamp(40px, 5.4vw, 64px); margin-bottom: 18px; }
-.story h4 { font-size: clamp(54px, 7vw, 86px); font-style: italic; }
-.story blockquote { margin: 0; padding: 4px 0 4px 22px; border-left: 3px solid rgba(49, 100, 96, .45); font-size: clamp(16px, 1.6vw, 19px); line-height: 1.7; }
-.story blockquote p { margin: 0 0 .42em; }
-.story p.body { font-size: clamp(16px, 1.55vw, 18px); line-height: 1.75; margin: 0; }
+.story h2, .story h4 { font-size: clamp(30px, 3.6vw, 44px); margin-bottom: 14px; }
+.story h4 { font-size: clamp(30px, 3.4vw, 40px); font-style: normal; letter-spacing: .06em; }
+.story blockquote { margin: 0; padding: 2px 0 2px 20px; border-left: 3px solid rgba(49, 100, 96, .45); font-family: "Amatic SC", cursive; font-weight: 700; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.22; letter-spacing: .02em; }
+.story blockquote p { margin: 0 0 .3em; }
+.story p.body { font-size: clamp(14px, 1.3vw, 16px); line-height: 1.75; margin: 0; }
 
 /* ── a diptych: the painting and the place it came from ── */
 .diptych { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 4vw, 54px); padding: 54px 0; max-width: 940px; margin: 0 auto; align-items: center; }
@@ -89,11 +89,11 @@ body.gallery-page {
 .wall .print:nth-child(3n)   { transform: rotate(-.5deg); }
 
 .autumn-head { text-align: center; padding-top: 54px; }
-.autumn-head h2 { font-size: clamp(38px, 5.6vw, 70px); max-width: 17em; margin: 0 auto; }
-.autumn-quote { max-width: 620px; margin: 26px auto 0; font-style: italic; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.8; text-align: left; border-left: 3px solid rgba(49, 100, 96, .45); padding-left: 22px; }
+.autumn-head h2 { font-size: clamp(28px, 3.6vw, 44px); max-width: 20em; margin: 0 auto; }
+.autumn-quote { max-width: 560px; margin: 26px auto 0; font-family: "Amatic SC", cursive; font-weight: 700; font-style: normal; letter-spacing: .02em; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.25; text-align: left; border-left: 3px solid rgba(49, 100, 96, .45); padding-left: 22px; }
 
 .g-quote { text-align: center; padding: 70px 0 30px; }
-.g-quote h3 { font-size: clamp(34px, 5vw, 58px); max-width: 19em; margin: 0 auto; }
+.g-quote h3 { font-size: clamp(26px, 3.4vw, 40px); max-width: 22em; margin: 0 auto; }
 .g-out { text-align: center; padding: 18px 0 70px; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
 .g-out a { color: var(--teal); border-bottom: 1.5px solid rgba(49, 100, 96, .5); padding-bottom: 2px; }
 .g-out a:hover { border-bottom-color: var(--teal); }
@@ -124,3 +124,13 @@ body.gallery-page {
 .pair .print.tilt-l { transform: rotate(-1.1deg); } .pair .print.tilt-r { transform: rotate(1deg); }
 .pair + .autumn-quote { margin-top: 38px; }
 @media (max-width: 520px) { .pair { gap: 10px; padding: 40px 0 26px; } .print::before { width: 56px; height: 18px; margin-left: -28px; top: -9px; } }
+.story blockquote em, .autumn-quote em { font-style: normal; }
+
+/* ── a feature print: one picture on a row of its own, about one screen tall ── */
+.feature-row { display: flex; justify-content: center; padding: 34px 0 20px; }
+.feature-row .print.feature { width: min(100%, 800px, calc(88vh * 0.75)); margin: 0; }
+.feature-row .print.tilt-r { transform: rotate(.8deg); }
+.feature-row + .autumn-quote { margin-top: 38px; }
+
+/* ── file-name captions under every picture ── */
+.print figcaption { margin-top: 10px; text-align: center; font-family: "Amatic SC", "Ma Shan Zheng", cursive; font-weight: 700; font-size: clamp(16px, 1.6vw, 20px); letter-spacing: .06em; line-height: 1.1; color: var(--teal-soft); overflow-wrap: anywhere; }
